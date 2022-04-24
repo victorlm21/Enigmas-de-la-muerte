@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Pasillo Victor.unity
+    guid: 02bfeb68483426849bb9ee659709f716
   m_configObjects: {}

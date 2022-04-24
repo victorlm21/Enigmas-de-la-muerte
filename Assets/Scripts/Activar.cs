@@ -8,7 +8,9 @@ public class Activar : MonoBehaviour
     public AudioClip archivoSonido;
     public AudioSource emisorSonido;
     public float delay;
-    private bool destruir = false;
+    public bool destruir = false;
+    private bool colision = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class Activar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (destruir)
+        if (destruir && colision)
         {
             Destroy(activado, delay);
         }        
@@ -27,7 +29,7 @@ public class Activar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")){
             activado.SetActive(true);
-            destruir = true;
+            colision = true;
         }
     }
 }
