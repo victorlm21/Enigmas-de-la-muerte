@@ -5,21 +5,28 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
     public float velocidad, correr, gravedad, fuerzaSalto;
+
     public float sensibilidad;
     public CharacterController playercc;
     public Transform playertr;
     private Vector3 caida;
     float xRotacion = 0f;
+    private Camera camara;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        camara.GetComponent<Camera>();
+        camara.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         MovimientoJugador();
         MovimientoCamara();
     }
@@ -55,4 +62,5 @@ public class Movimiento : MonoBehaviour
         caida.y = -gravedad * Time.deltaTime;
         playercc.Move(caida);
     }
+    
 }
