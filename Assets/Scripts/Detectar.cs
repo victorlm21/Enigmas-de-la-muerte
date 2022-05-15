@@ -45,8 +45,18 @@ public class Detectar : MonoBehaviour
 
     public void aparicionPosterior()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance) && hit.collider.gameObject.CompareTag("mostrar"))
+        if (Physics.Raycast(transform.position, transform.forward, maxDistance))
         {
+            if (hit.collider.gameObject.CompareTag("mostrar"))
+            {
+                mecanicaPasillo();
+            }
+
+        }  
+    }
+
+    private void mecanicaPasillo()
+    {
             //Para no repetir
             if (objetoColisionado != hit.collider.gameObject.name)
             {
@@ -69,7 +79,6 @@ public class Detectar : MonoBehaviour
                 }
                 objetos[indice].DestruirOaparecer();
             }
-        }
         else
         {
             if (objetos[indice].sonidoNoVisible)

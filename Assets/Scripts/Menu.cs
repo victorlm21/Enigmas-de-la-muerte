@@ -50,10 +50,12 @@ public class Menu : MonoBehaviour
             if (pausado)
             {
                 Reanudar();
+                pausado = false;
             }
             else
             {
                 Pausa();
+                pausado = true;
             }
         }
         valorSensibilidad.text = Mathf.Round(barraSensibilidad.value).ToString();
