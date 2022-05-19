@@ -7,6 +7,7 @@ TagManager:
   - mostrar
   - payaso
   - mostrar inicial
+  - Objeto
   layers:
   - Default
   - TransparentFX
