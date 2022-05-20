@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    public float velocidad, correr, gravedad, fuerzaSalto;
-
+    public float velocidad, correr, gravedad;
     public float sensibilidad;
     public CharacterController playercc;
     public Transform playertr;
@@ -25,16 +24,15 @@ public class Movimiento : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {        
         MovimientoJugador();
         MovimientoCamara();
     }
     private void MovimientoCamara()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime;
-        
+        float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime; 
+        float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime; 
+
         //Giro de la camara vertical
         xRotacion -= mouseY;
         //Limite de giro vertical
