@@ -10,7 +10,7 @@ public class Detectar : MonoBehaviour
     public List<ObjetosDinamicos> objetos = new List<ObjetosDinamicos>();
 
     private int contador = 0;
-    public int indice = 0;
+    private int indice = 0;
     private string objetoColisionado = "";
 
 

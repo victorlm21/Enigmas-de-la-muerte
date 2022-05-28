@@ -39,6 +39,8 @@ public class Menu : MonoBehaviour
         coger.SetActive(false);
 
         barraSensibilidad.value = codigo.sensibilidad;
+        barraSensibilidad.value = 5;
+
     }
 
     // Update is called once per frame
@@ -94,7 +96,7 @@ public class Menu : MonoBehaviour
     }
     public void ajusteVolumen()
     {
-        am.SetFloat("audio", barraVolumen.value);
+        am.SetFloat("audio", barraVolumen.value - 20);
     }
     public void ajusteSensibilidad()
     {
