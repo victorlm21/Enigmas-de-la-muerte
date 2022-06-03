@@ -35,8 +35,8 @@ public class Movimiento : MonoBehaviour
     {
 
         /**
-         * @param mouseX Controla la rotacion horizontal.
-         * @param mouseY Controla la rotacion vertical.
+         * @param mouseX Toma el control del eje X predefinido por unity (teclado y mando de consola), ademas le añade la sensibilidad.
+         * @param mouseY Toma el control del eje Y predefinido por unity (teclado y mando de consola), ademas le añade la sensibilidad.
          * @see Input.GetAxis() Obtiene el control de los ejes predefinidos por unity (para el teclado o mando)
          * @see Time.deltaTime permite que los calculos se produzcan con la misma frecuencia entre frames
          * @see Mathf.Clamp() limita los valores de una variable entre 2 limites
@@ -56,8 +56,17 @@ public class Movimiento : MonoBehaviour
         //Giramos el jugador entero horizontalmente
         playertr.Rotate(Vector3.up * mouseX);
     }
+    /*! \brief Metodo que permite el movimiento del jugador
+    */
     private void MovimientoJugador()
     {
+        /**
+         * @param movX Toma el control del eje Horizontal predefinido por unity (teclado y mando de consola).
+         * @param movZ Toma el control del eje Vertical predefinido por unity (teclado y mando de consola).
+         * @param mov Vector para el movimiento del jugador
+         * @see Con un if comprobamos que pulsa la tecla "LeftShift" para correr, si no lo pulsa solo andará
+         * @see Move(): Propio del CharacterController para el movimiento.
+         */
         float movX = Input.GetAxis("Horizontal");
         float movZ = Input.GetAxis("Vertical");
 

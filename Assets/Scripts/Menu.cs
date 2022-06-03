@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour
     public Movimiento codigo;
     private Text valorVolumen, valorSensibilidad;
 
+    /*! \brief Tomamos el control de los componentes directamentes sin enlazarlos en la interfaz de unity
+    */
     private void Awake()
     {
         valorVolumen = GameObject.Find("ValorVolumen").GetComponent<Text>();
@@ -63,7 +65,8 @@ public class Menu : MonoBehaviour
         valorSensibilidad.text = Mathf.Round(barraSensibilidad.value).ToString();
         valorVolumen.text = Mathf.FloorToInt(barraVolumen.value).ToString();
     }
-
+    /*! \brief Pausamos el juego y desbloqueamos el cursor
+    */
     public void Pausa()
     {
         Time.timeScale = 0f;
@@ -73,6 +76,8 @@ public class Menu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    /*! \brief Invertimos los cambios realizados en el metodo Pausa()
+    */
     public void Reanudar()
     {
         Time.timeScale = 1f;
@@ -83,21 +88,28 @@ public class Menu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    /*! \brief Salimos a la escena principal
+    */
     public void Salir()
     {
         SceneManager.LoadScene("Menu Principal");
     }
-
+    /*! \brief Invertimos los cambios realizados en el metodo Pausa()
+    */
     public void Opciones()
     {
         ui.enabled = false;
         pausa.enabled = false;
         opciones.enabled = true;
     }
+    /*! \brief Modificamos el volumen general
+    */
     public void ajusteVolumen()
     {
         am.SetFloat("audio", barraVolumen.value - 20);
     }
+    /*! \brief Modificamos los valores de las variables contenidas en el script Movimiento
+    */
     public void ajusteSensibilidad()
     {
         codigo.sensibilidad = barraSensibilidad.value * 100;
