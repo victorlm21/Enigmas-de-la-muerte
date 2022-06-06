@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour
     public Movimiento codigo;
     private Text valorVolumen, valorSensibilidad;
 
+    public AudioSource[] allAudioSources;
+
     /*! \brief Tomamos el control de los componentes directamentes sin enlazarlos en la interfaz de unity
     */
     private void Awake()
@@ -75,6 +77,8 @@ public class Menu : MonoBehaviour
         opciones.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        StopAllAudio();
     }
     /*! \brief Invertimos los cambios realizados en el metodo Pausa()
     */
@@ -113,5 +117,13 @@ public class Menu : MonoBehaviour
     public void ajusteSensibilidad()
     {
         codigo.sensibilidad = barraSensibilidad.value * 100;
+    }
+
+    public void StopAllAudio()
+    {
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
     }
 }

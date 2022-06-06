@@ -6,7 +6,7 @@ public class Activar : MonoBehaviour
 {
     public GameObject activador, activado;
     public AudioClip archivoSonido;
-    public AudioSource emisorSonido;
+    private AudioSource emisorSonido;
     public float delay;
     public bool destruir = false;
     private bool colision = false;
@@ -15,6 +15,7 @@ public class Activar : MonoBehaviour
     void Start()
     {
         activado.SetActive(false);
+        emisorSonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,8 @@ public class Activar : MonoBehaviour
         if (other.gameObject.CompareTag("Player")){
             activado.SetActive(true);
             colision = true;
+            emisorSonido.clip = archivoSonido;
+            emisorSonido.Play();
         }
     }
 }

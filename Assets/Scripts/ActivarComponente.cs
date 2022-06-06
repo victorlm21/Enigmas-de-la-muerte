@@ -6,12 +6,19 @@ public class ActivarComponente : MonoBehaviour
 {
     public GameObject activador, activado;
     public AudioClip archivoSonido;
-    public AudioSource emisorSonido;
+    private AudioSource emisorSonido;
+
+    private void Start()
+    {
+        emisorSonido = GetComponent<AudioSource>();
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             activado.AddComponent<Rigidbody>();
+            emisorSonido.clip = archivoSonido;
+            emisorSonido.Play();
         }
     }
 }

@@ -69,7 +69,6 @@ public class Detectar : MonoBehaviour
                 indice = contador - 1;
                 if (objetos[indice].sonidoVisible)
                 {
-                    Debug.Log(objetos[indice].obj.name + " Tiene sonido al ser visto");
                     objetos[indice].emisor.clip = objetos[indice].clipVisible;
                     objetos[indice].emisor.Play();
                 }
