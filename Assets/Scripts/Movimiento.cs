@@ -26,6 +26,7 @@ public class Movimiento : MonoBehaviour
     {        
         MovimientoJugador();
         MovimientoCamara();
+        agacharse();
     }
 
 
@@ -82,5 +83,16 @@ public class Movimiento : MonoBehaviour
         caida.y = -gravedad * Time.deltaTime;
         playercc.Move(caida);
     }
-    
+
+    public void agacharse()
+    {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            playercc.height = 1.5f;
+        }
+        else
+        {
+            playercc.height = 3;
+        }
+    }    
 }
