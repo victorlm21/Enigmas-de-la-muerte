@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CogerObjeto : MonoBehaviour
 {
-
     public GameObject handPoint;
 
     private GameObject pickedObject = null;
