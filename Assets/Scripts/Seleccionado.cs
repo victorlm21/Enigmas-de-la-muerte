@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Seleccionado : MonoBehaviour
 {
@@ -12,7 +12,10 @@ public class Seleccionado : MonoBehaviour
     public GameObject minijuego;
     public Animator animacion;
     LayerMask mask;
+    public InputField mainInputField;
     // Start is called before the first frame update
+    public string combinacion;
+    public Text TextoLeido;
 
     void Start()
     {
@@ -20,6 +23,7 @@ public class Seleccionado : MonoBehaviour
         TextDetect.SetActive(false);
         minijuego.SetActive(false);
         animacion.enabled=false;
+        TextoLeido.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -35,13 +39,12 @@ public class Seleccionado : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    minijuego.SetActive(true);
+                    Time.timeScale = 0;
                     minijuegoEntrada();
-                    animacion.enabled = true;
-                    if (Input.GetKeyDown(KeyCode.O))
-                    {
-                        minijuegoSalida();
-                    }
+                    minijuego.SetActive(true);
+                    mainInputField.ActivateInputField();
+                        
+
 
                         
                 }
@@ -84,5 +87,21 @@ public class Seleccionado : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         minijuego.SetActive(false);
+        Time.timeScale = 1;
     }
+    public void guardarVariable()
+    {
+        combinacion = TextoLeido.text;
+        if (combinacion.Equals("0753"))
+        {
+            animacion.enabled = true;
+            minijuegoSalida();
+        }
+        else
+        {
+            minijuegoSalida();
+
+        }
+    }
+
 }
