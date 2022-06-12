@@ -19,7 +19,6 @@ public class botonSalirCuarto : MonoBehaviour
         if (mano.GetComponent<ObjetosSalaSergio>().objetosCogidos && mano.GetComponent<cogerChucky>().respuestaChuky)
         {
             boton.SetActive(true);
-            TextDetect.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 TextDetect.SetActive(false);
@@ -29,7 +28,7 @@ public class botonSalirCuarto : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.CompareTag("4 crossing signal from ps"))
+        if (other.CompareTag("botonPared"))
         {
             boton = other.gameObject;
             TextDetect.SetActive(true);
@@ -37,7 +36,7 @@ public class botonSalirCuarto : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("4 crossing signal from ps"))
+        if (other.CompareTag("botonPared"))
         {
             TextDetect.SetActive(false);
         }

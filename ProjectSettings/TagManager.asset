@@ -15,6 +15,7 @@ TagManager:
   - alfombra
   - moneda
   - chuky
+  - botonPared
   layers:
   - Default
   - TransparentFX

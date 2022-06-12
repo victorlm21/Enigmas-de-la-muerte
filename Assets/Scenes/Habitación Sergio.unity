@@ -135,10 +135,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 466007206, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466007206, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466007206, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 506111108, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: animacion
       value: 
       objectReference: {fileID: 2030533412}
+    - target: {fileID: 981234913, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607690852, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1608825222, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: cuadro1
       value: 
@@ -159,6 +179,14 @@ PrefabInstance:
       propertyPath: boton
       value: 
       objectReference: {fileID: 1903407848}
+    - target: {fileID: 2117438895, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117438895, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4688897808010464938, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_Name
       value: jugador
@@ -287,6 +315,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1903407849, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0665361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903407849, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2373228
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903407849, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+      propertyPath: m_Center.y
+      value: -1.866276
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903407849, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+      propertyPath: m_Center.z
+      value: 1.3708467
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132148550416021, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+      propertyPath: m_TagString
+      value: botonPared
+      objectReference: {fileID: 0}
     - target: {fileID: 7861854472223369047, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
       propertyPath: m_Controller
       value: 
