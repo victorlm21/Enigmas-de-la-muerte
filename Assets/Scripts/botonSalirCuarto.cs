@@ -24,5 +24,6 @@ public class botonSalirCuarto : MonoBehaviour
             {
                 TextDetect.SetActive(false);
             }
+        }
     }
 }
