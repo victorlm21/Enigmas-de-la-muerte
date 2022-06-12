@@ -7,7 +7,7 @@ TagManager:
   - mostrar inicial
   - mostrar
   - payaso
-  - cajaFuerte
+  - Objeto
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Raycast Detect
+  - 
   - 
   - 
   - 
