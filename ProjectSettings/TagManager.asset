@@ -8,11 +8,13 @@ TagManager:
   - mostrar
   - payaso
   - Objeto
+  - muneco1
+  - cajaFuerte
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Raycast Detect
   - Water
   - UI
   - 
