@@ -8,11 +8,15 @@ TagManager:
   - mostrar
   - payaso
   - Objeto
+  - muneco1
+  - cajaFuerte
+  - Cofre
+  - imagen
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Raycast Detect
   - Water
   - UI
   - 
