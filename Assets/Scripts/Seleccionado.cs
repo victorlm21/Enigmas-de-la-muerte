@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Seleccionado : MonoBehaviour
 {
+
+    //CODIGO EN EL JUGADOR
     public float distancia = 1.5f;
     public Texture2D puntero;
     public GameObject TextDetect;
@@ -16,6 +18,11 @@ public class Seleccionado : MonoBehaviour
     // Start is called before the first frame update
     public string combinacion;
     public Text TextoLeido;
+
+
+    public GameObject player;
+    public GameObject mano;
+    public bool abierto = false;
 
     void Start()
     {
@@ -42,17 +49,18 @@ public class Seleccionado : MonoBehaviour
                     Time.timeScale = 0;
                     minijuegoEntrada();
                     minijuego.SetActive(true);
-                    mainInputField.ActivateInputField();
-                        
-
-
-                        
+                    mainInputField.ActivateInputField();    
                 }
             }
         }
         else
         {
             Deselect();
+        }
+        if (abierto)
+        {
+            player.GetComponent<Seleccionado>().enabled = false;
+            mano.GetComponent<cogerChucky>().enabled = true;
         }
     }
     void SelectObject(Transform transform)
@@ -96,6 +104,7 @@ public class Seleccionado : MonoBehaviour
         {
             animacion.enabled = true;
             minijuegoSalida();
+            abierto = true;
         }
         else
         {
@@ -107,8 +116,18 @@ public class Seleccionado : MonoBehaviour
     {
         if (other.gameObject.CompareTag("alfombra"))
         {
-
+            player.GetComponent<Seleccionado>().enabled = false;
+            mano.GetComponent<ObjetosSalaSergio>().enabled = true;
+            mano.GetComponent<cogerChucky>().enabled = false;
         }
     }
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("alfombra"))
+        {
+            player.GetComponent<Seleccionado>().enabled = true;
+            mano.GetComponent<ObjetosSalaSergio>().enabled = false;
+            mano.GetComponent<cogerChucky>().enabled = true;
+        }
+    }
 }

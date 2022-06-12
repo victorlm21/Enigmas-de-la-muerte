@@ -12,6 +12,9 @@ TagManager:
   - cajaFuerte
   - Cofre
   - imagen
+  - alfombra
+  - moneda
+  - chuky
   layers:
   - Default
   - TransparentFX

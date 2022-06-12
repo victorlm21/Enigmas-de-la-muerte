@@ -5,32 +5,46 @@ using UnityEngine.UI;
 
 public class ObjetosSalaSergio : MonoBehaviour
 {
-
-    GameObject ultimoReconocido = null;
-    public float distancia = 1.5f;
-    LayerMask mask;
+    //CODIGO EN EL OBJETO MANO
     public GameObject TextDetect;
-    public GameObject payaso; 
-    // Start is called before the first frame update
-    void Start()
+    private GameObject objeto;
+    private bool destruir = false;
+    public GameObject cuadro;
+    
+    private void Start()
     {
-        mask = LayerMask.GetMask("RayCast");
         TextDetect.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("muneco1"))
+        if (Input.GetKeyDown(KeyCode.E) && destruir)
         {
-            TextDetect.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            Destroy(objeto);
+            TextDetect.SetActive(false);
+            switch (objeto.name)
             {
-                Destroy(payaso);
+                case "payaso":
+                    cuadro.AddComponent<Rigidbody>();
+                    break;
+
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
+        {
+            objeto = other.gameObject;
+            TextDetect.SetActive(true);
+            destruir = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
+        {
+            TextDetect.SetActive(false);
+            destruir = false;
         }
     }
 }
