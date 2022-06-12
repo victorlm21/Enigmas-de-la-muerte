@@ -1162,8 +1162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasUI: {fileID: 641768661}
   tiempo: 60
-  relojAamarillo: 30
-  relojArojo: 10
+  relojAamarillo: 55
+  relojArojo: 50
 --- !u!1 &546391859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2ba81b1f2f5a1654c9ffff8736818232, type: 3}
@@ -3322,7 +3322,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 5
+  m_Range: 2.8233013
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8598,7 +8598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759645183, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 767853944, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_Color.b
@@ -9946,7 +9946,7 @@ Transform:
   m_GameObject: {fileID: 7227623617478118051}
   m_LocalRotation: {x: -0.4999923, y: -0.5000065, z: 0.50000775, w: -0.4999935}
   m_LocalPosition: {x: -11.169075, y: 1.38, z: 1.224575}
-  m_LocalScale: {x: 0.49999997, y: 1, z: 0.5382216}
+  m_LocalScale: {x: 0.6, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7227623616091685746}
   m_RootOrder: 8
