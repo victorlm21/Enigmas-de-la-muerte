@@ -10,6 +10,8 @@ TagManager:
   - Objeto
   - muneco1
   - cajaFuerte
+  - Undefined
+  - Cofre
   layers:
   - Default
   - TransparentFX
