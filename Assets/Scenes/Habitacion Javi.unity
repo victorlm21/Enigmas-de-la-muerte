@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919132147679818091, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
+      propertyPath: m_TagString
+      value: Cofre
+      objectReference: {fileID: 0}
     - target: {fileID: 1063426907214261270, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
       propertyPath: m_Name
       value: Javi
