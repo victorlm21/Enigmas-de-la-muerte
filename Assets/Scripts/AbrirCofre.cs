@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinijuegoFotos : MonoBehaviour
+public class AbrirCofre : MonoBehaviour
 {
 
-    public GameObject fotos;
-    public GameObject llave;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        fotos.SetActive(false);
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (llave.active == false)
+
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Objeto")
         {
-            fotos.SetActive(true);
+            anim.SetBool("AbrirCofre", true);
         }
     }
 }
