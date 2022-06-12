@@ -1019,11 +1019,10 @@ GameObject:
   - component: {fileID: 759645186}
   - component: {fileID: 759645185}
   - component: {fileID: 1608825222}
-  - component: {fileID: 1701437128}
-  - component: {fileID: 1701437129}
+  - component: {fileID: 1984435433}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: mano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,6 +1068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPoint: {fileID: 1552728119}
+  coger: {fileID: 1040739008}
+  texto: {fileID: 1972278773}
 --- !u!54 &759645185
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1092,17 +1093,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759645183}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c66e0e63f71d654298439a354919cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TextDetect: {fileID: 1079392624}
   cuadro: {fileID: 0}
-  cuadro1: {fileID: 0}
-  cuadro2: {fileID: 0}
-  objetosCogidos: 0
---- !u!114 &1701437128
+--- !u!114 &1984435433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1111,30 +1109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 759645183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b9da4e80635774e8e628e5ff422381, type: 3}
+  m_Script: {fileID: 11500000, guid: ecf784aae93a0cb41be6b7bb233eb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextDetect: {fileID: 1079392624}
-  mano: {fileID: 759645183}
-  chuky: {fileID: 0}
-  player: {fileID: 4688897808010464938}
-  cuadro3: {fileID: 0}
-  respuestaChuky: 0
---- !u!114 &1701437129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759645183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd44cfba2a609d4a9654891158198de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mano: {fileID: 759645183}
-  boton: {fileID: 0}
-  TextDetect: {fileID: 1079392624}
+  interactuar: {fileID: 1079392624}
+  texto: {fileID: 2136344337}
 --- !u!1 &767853942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,6 +3699,7 @@ GameObject:
   - component: {fileID: 501790692}
   - component: {fileID: 2693120504083278871}
   - component: {fileID: 506111108}
+  - component: {fileID: 506111114}
   m_Layer: 0
   m_Name: jugador
   m_TagString: Player
@@ -3775,7 +3755,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4688897808010464938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7264d0a1404b012409665f206a206b32, type: 3}
   m_Name: 
@@ -3898,7 +3878,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4688897808010464938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309663540c046345b397b9ed5b86716, type: 3}
   m_Name: 
@@ -3912,7 +3892,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4688897808010464938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9172163360fcbd84ebdf5c60e65c424f, type: 3}
   m_Name: 
@@ -3925,6 +3905,20 @@ MonoBehaviour:
   mainInputField: {fileID: 2102590041}
   combinacion: 
   TextoLeido: {fileID: 662499190}
-  player: {fileID: 4688897808010464938}
-  mano: {fileID: 759645183}
+  player: {fileID: 0}
+  mano: {fileID: 0}
   abierto: 0
+--- !u!114 &506111114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4688897808010464938}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c66e0e63f71d654298439a354919cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextDetect: {fileID: 1079392624}
+  cuadro: {fileID: 0}

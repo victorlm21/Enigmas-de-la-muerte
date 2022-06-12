@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class CogerObjeto : MonoBehaviour
@@ -8,11 +9,20 @@ public class CogerObjeto : MonoBehaviour
 
     private GameObject pickedObject = null;
 
+    public GameObject coger;
+    public Text texto;
 
-     void Update()
+    private void Start()
+    {
+        coger.SetActive(false);
+    }
+
+    void Update()
     {
         if (pickedObject != null)
         {
+            coger.SetActive(true);
+            texto.text = "R";
             if (Input.GetKey("r"))
             {
                 pickedObject.GetComponent<Rigidbody>().useGravity = true;
@@ -31,6 +41,8 @@ public class CogerObjeto : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Objeto"))
         {
+            coger.SetActive(true);
+            texto.text = "E";
             if (Input.GetKey("e") && pickedObject == null)
             {
                 other.GetComponent<Rigidbody>().useGravity = false;
@@ -45,7 +57,11 @@ public class CogerObjeto : MonoBehaviour
 
             }
         }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        coger.SetActive(false);
     }
 
 }
