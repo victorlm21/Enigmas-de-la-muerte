@@ -7,9 +7,7 @@ TagManager:
   - mostrar inicial
   - mostrar
   - payaso
-  - cajaFuerte
   - Objeto
-  - muneco1
   layers:
   - Default
   - TransparentFX
@@ -17,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Raycast Detect
-  - RayCast
+  - 
+  - 
   - 
   - 
   - 
