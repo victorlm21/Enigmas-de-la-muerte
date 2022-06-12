@@ -9,8 +9,6 @@ public class cogerChucky : MonoBehaviour
     public GameObject chuky;
     private bool destruir = false;
     public GameObject player;
-    public GameObject cuadro3;
-    public bool respuestaChuky = false;
 
     // Update is called once per frame
     void Update()
@@ -21,8 +19,6 @@ public class cogerChucky : MonoBehaviour
             {
                 Destroy(chuky);
                 TextDetect.SetActive(false);
-                cuadro3.AddComponent<Rigidbody>();
-                respuestaChuky = true;
             }
         }
     }
