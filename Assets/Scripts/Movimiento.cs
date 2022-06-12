@@ -12,14 +12,11 @@ public class Movimiento : MonoBehaviour
     float xRotacion = 0f;
     private Camera camara;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         camara.GetComponent<Camera>();
-        camara.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
     // Update is called once per frame
     void Update()
@@ -94,5 +91,5 @@ public class Movimiento : MonoBehaviour
         {
             playercc.height = 3;
         }
-    }    
+    }
 }

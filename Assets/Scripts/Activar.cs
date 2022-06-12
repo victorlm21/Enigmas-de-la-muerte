@@ -28,11 +28,11 @@ public class Activar : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")){
+        if (other.gameObject.CompareTag("Player") && colision == false)
+        {
             activado.SetActive(true);
             colision = true;
-            emisorSonido.clip = archivoSonido;
-            emisorSonido.Play();
+            emisorSonido.PlayOneShot(archivoSonido);
         }
     }
 }

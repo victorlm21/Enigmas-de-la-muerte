@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
 {
     private bool pausado = false;
     
-    public Canvas ui, pausa, opciones;
+    public Canvas ui, pausa, opciones, cronometro;
     private GameObject interactuar, coger;
     
     public AudioMixer am;
@@ -75,6 +75,7 @@ public class Menu : MonoBehaviour
         ui.enabled = false;
         pausa.enabled = true;
         opciones.enabled = false;
+        cronometro.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -88,6 +89,7 @@ public class Menu : MonoBehaviour
         ui.enabled = true;
         pausa.enabled = false;
         opciones.enabled = false;
+        cronometro.enabled = true;
         pausado = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

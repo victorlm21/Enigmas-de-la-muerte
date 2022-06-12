@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Detectar : MonoBehaviour
 {
@@ -8,14 +9,21 @@ public class Detectar : MonoBehaviour
 
     private RaycastHit hit;
     public List<ObjetosDinamicos> objetos = new List<ObjetosDinamicos>();
+    public ObjetosDinamicos puerta;
 
     private int contador = 0;
     private int indice = 0;
     private string objetoColisionado = "";
 
+    public Text pista;
+    
+    
+
 
     private void Awake()
     {
+        pista = GameObject.Find("pistas").GetComponent<Text>();
+        pista.text = "";
         foreach (ObjetosDinamicos i in objetos)
         {
             if (i.visibleInicio)
@@ -28,6 +36,7 @@ public class Detectar : MonoBehaviour
             }
             i.VisibilidadSubobjetosInicio();
         }
+        
     }
     void FixedUpdate()
     {
@@ -39,6 +48,8 @@ public class Detectar : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance) && hit.collider.gameObject.CompareTag("mostrar inicial"))
         {
             objetos[0].Visible();
+            objetos[0].emisor.clip = objetos[0].clipVisible;
+            objetos[0].emisor.Play();          
         }
     }
 
@@ -51,7 +62,6 @@ public class Detectar : MonoBehaviour
             {
                 mecanicaPasillo();
             }
-
         }  
     }
 
@@ -85,6 +95,18 @@ public class Detectar : MonoBehaviour
                 objetos[indice].emisor.clip = objetos[indice].clipNoVisible;
                 objetos[indice].emisor.Play();
             }
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("mostrar inicial"))
+        {
+            Debug.Log("COLISION");
+            pista.text = "Puerta cerrada";
+            puerta.emisor.clip = puerta.clipVisible;
+            puerta.emisor.Play();
+            Destroy(pista, 3f);
         }
     }
     void OnDrawGizmos()

@@ -6,25 +6,13 @@ public class ActivarComponente : MonoBehaviour
 {
     public GameObject activador, activado;
     public AudioClip archivoSonido;
-    private AudioSource emisorSonido;
+    public AudioSource emisorSonido;
     public float delay;
     public bool destruir = false;
     private bool colision;
-
-    private void Start()
-    {
-        emisorSonido = GetComponent<AudioSource>();
-    }
-    void Update()
-    {
-        if (destruir && colision)
-        {
-            Destroy(emisorSonido, delay);
-        }
-    }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && colision == false)
         {
             activado.AddComponent<Rigidbody>();
             emisorSonido.clip = archivoSonido;
