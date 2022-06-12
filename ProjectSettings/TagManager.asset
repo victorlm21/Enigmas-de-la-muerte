@@ -8,6 +8,10 @@ TagManager:
   - mostrar
   - payaso
   - Objeto
+  - cajaFuerte
+  - muneco1
+  - Cofre
+  - Imagen
   layers:
   - Default
   - TransparentFX
