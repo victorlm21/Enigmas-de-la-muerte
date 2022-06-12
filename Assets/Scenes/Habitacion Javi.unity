@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 273999943, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1861778502}
+    - target: {fileID: 296280834, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1861778502}
+    - target: {fileID: 555146821, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1861778502}
+    - target: {fileID: 1120217938, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1861778502}
     - target: {fileID: 1063426907214261270, guid: 5712746433e29fd42926c0c00417bb23, type: 3}
       propertyPath: m_Name
       value: Javi
@@ -265,3 +281,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+--- !u!114 &1861778502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2136344337, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+  m_PrefabInstance: {fileID: 1198287238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
