@@ -293,10 +293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7861854472223369046, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7861854472223369047, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
       propertyPath: m_Controller
       value: 
@@ -356,24 +352,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132148413504045, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
   m_PrefabInstance: {fileID: 713275683}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1690947034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8869760490716062145, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
-  m_PrefabInstance: {fileID: 713275683}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1690947035
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690947034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.849817, y: 7.4884906, z: 10.374939}
-  m_Center: {x: -0.8982611, y: 1.9404676, z: -0.28928757}
 --- !u!95 &2030533412 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2030533412, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
