@@ -15,6 +15,7 @@ TagManager:
   - alfombra
   - moneda
   - chuky
+  - mano
   layers:
   - Default
   - TransparentFX
