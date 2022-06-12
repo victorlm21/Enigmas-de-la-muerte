@@ -1152,6 +1152,7 @@ MonoBehaviour:
   mano: {fileID: 759645183}
   boton: {fileID: 0}
   TextDetect: {fileID: 1079392624}
+  animacion: {fileID: 0}
 --- !u!1 &767853942
 GameObject:
   m_ObjectHideFlags: 0

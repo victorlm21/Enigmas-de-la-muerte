@@ -7,10 +7,12 @@ public class botonSalirCuarto : MonoBehaviour
     public GameObject mano;
     public GameObject boton;
     public GameObject TextDetect;
+    public Animator animacion;
     // Start is called before the first frame update
     void Start()
     {
         boton.SetActive(false);
+        animacion.enabled = false;
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class botonSalirCuarto : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 TextDetect.SetActive(false);
+                animacion.enabled = true;
             }
         }
     }

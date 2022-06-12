@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: boton
       value: 
       objectReference: {fileID: 1903407848}
+    - target: {fileID: 1701437135, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: animacion
+      value: 
+      objectReference: {fileID: 2073477656}
     - target: {fileID: 2117438895, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -193,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4688897808010464940, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4688897808010464940, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662014453 stripped
 GameObject:
@@ -321,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: a9aa917a6ca790841ba97a91e68e3249, type: 2}
     - target: {fileID: 8869760490821333480, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8869760490821333480, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,5 +391,10 @@ GameObject:
 --- !u!95 &2030533412 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2030533412, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
+  m_PrefabInstance: {fileID: 713275683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2073477656 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2073477656, guid: 362e42e6a0e1c974b97fffc80effe62d, type: 3}
   m_PrefabInstance: {fileID: 713275683}
   m_PrefabAsset: {fileID: 0}
