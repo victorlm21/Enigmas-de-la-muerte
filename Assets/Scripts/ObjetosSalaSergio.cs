@@ -10,7 +10,12 @@ public class ObjetosSalaSergio : MonoBehaviour
     private GameObject objeto;
     private bool destruir = false;
     public GameObject cuadro;
-    
+    public GameObject cuadro1;
+    public GameObject cuadro2;
+    public bool objetosCogidos = false;
+    private bool cuadro1er = false;
+    private bool cuadro2do = false;
+
     private void Start()
     {
         TextDetect.SetActive(false);
@@ -23,10 +28,19 @@ public class ObjetosSalaSergio : MonoBehaviour
             TextDetect.SetActive(false);
             switch (objeto.name)
             {
-                case "payaso":
-                    cuadro.AddComponent<Rigidbody>();
+                case "gremclown":
+                    cuadro1.AddComponent<Rigidbody>();
+                    cuadro1er = true;
+                    break;
+                case "LowProf_Low":
+                    cuadro2.AddComponent<Rigidbody>();
+                    cuadro2do = true;
                     break;
 
+            }
+            if (cuadro1er && cuadro2do)
+            {
+                objetosCogidos = true;
             }
         }
     }
