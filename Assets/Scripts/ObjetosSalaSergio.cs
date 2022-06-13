@@ -8,7 +8,7 @@ public class ObjetosSalaSergio : MonoBehaviour
     //CODIGO EN EL OBJETO MANO
     public GameObject TextDetect;
     private GameObject objeto;
-    private bool destruir = false;
+    public bool destruir = false;
     public GameObject cuadro;
     public GameObject cuadro1;
     public GameObject cuadro2;
@@ -31,6 +31,7 @@ public class ObjetosSalaSergio : MonoBehaviour
             //hacemos que lo reproduzca
             emisor.Play();
             Destroy(objeto);
+            destruir = false;
             TextDetect.SetActive(false);
             //Hacemos que el emisor vaya a reproducir ese clip
 
@@ -56,6 +57,7 @@ public class ObjetosSalaSergio : MonoBehaviour
     {
         if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
         {
+            Debug.Log("colision objeto");
             objeto = other.gameObject;
             TextDetect.SetActive(true);
             destruir = true;
@@ -65,6 +67,7 @@ public class ObjetosSalaSergio : MonoBehaviour
     {
         if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
         {
+            
             TextDetect.SetActive(false);
             destruir = false;
         }

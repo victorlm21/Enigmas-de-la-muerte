@@ -16,9 +16,6 @@ public class Detectar : MonoBehaviour
     private string objetoColisionado = "";
 
     public Text pista;
-    
-    
-
 
     private void Awake()
     {
@@ -36,7 +33,7 @@ public class Detectar : MonoBehaviour
             }
             i.VisibilidadSubobjetosInicio();
         }
-        
+       
     }
     void FixedUpdate()
     {
@@ -102,7 +99,6 @@ public class Detectar : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("mostrar inicial"))
         {
-            Debug.Log("COLISION");
             pista.text = "Puerta cerrada";
             puerta.emisor.clip = puerta.clipVisible;
             puerta.emisor.Play();

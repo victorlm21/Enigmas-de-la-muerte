@@ -21,13 +21,18 @@ public class anim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("contacto: " + contacto);
         if (contacto)
-        {         
+        {
+            //Debug.Log("animacion: " + animacion.GetBool("girar"));
             if (animacion.GetBool("girar") == false)
             {
+                Debug.Log("En el if");
                 texto.text = "F";
+                Debug.Log("texto: " + texto.text);
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+
                     animacion.SetBool("girar", true);
                     animacion.SetBool("volver", false);
                     emisor.clip = clip;

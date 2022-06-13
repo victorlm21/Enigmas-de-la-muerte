@@ -16,6 +16,10 @@ TagManager:
   - moneda
   - chuky
   - botonPared
+  - mano
+  - Habitacion Sergio
+  - Habitacion Javi
+  - Pasillo Victor
   layers:
   - Default
   - TransparentFX

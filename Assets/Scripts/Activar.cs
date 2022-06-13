@@ -24,7 +24,7 @@ public class Activar : MonoBehaviour
         if (destruir && colision)
         {
             Destroy(activado, delay);
-        }        
+        }
     }
     public void OnTriggerEnter(Collider other)
     {

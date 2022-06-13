@@ -21,8 +21,6 @@ public class Cronometro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        contador.enabled = false;
-        reloj.enabled = false;
         contador.text = " " + tiempo;
     }
     // Update is called once per frame

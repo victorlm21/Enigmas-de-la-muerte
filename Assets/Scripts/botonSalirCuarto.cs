@@ -11,6 +11,7 @@ public class botonSalirCuarto : MonoBehaviour
     public AudioSource emisor;
     //Clip de sonido
     public AudioClip clip;
+    
     // Start is called before the first frame update
     void Start()
     {

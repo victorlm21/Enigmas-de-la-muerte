@@ -79,7 +79,7 @@ public class Menu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        StopAllAudio();
+        //StopAllAudio();
     }
     /*! \brief Invertimos los cambios realizados en el metodo Pausa()
     */

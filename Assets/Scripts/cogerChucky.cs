@@ -36,7 +36,6 @@ public class cogerChucky : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Colision");
         if (other.CompareTag("chuky"))
         {
             chuky = other.gameObject;
