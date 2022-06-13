@@ -1105,6 +1105,8 @@ MonoBehaviour:
   cuadro1: {fileID: 0}
   cuadro2: {fileID: 0}
   objetosCogidos: 0
+  emisor: {fileID: 0}
+  clip: {fileID: 8300000, guid: 9f759c798fe43754f96970cac764bc33, type: 3}
 --- !u!114 &1984435433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1139,8 @@ MonoBehaviour:
   player: {fileID: 4688897808010464938}
   cuadro3: {fileID: 0}
   respuestaChuky: 0
+  Emisor: {fileID: 0}
+  Clip: {fileID: 8300000, guid: 0ec1f07f3d8ccf44598df121abaf48f9, type: 3}
 --- !u!114 &1701437135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,6 +1157,8 @@ MonoBehaviour:
   boton: {fileID: 0}
   TextDetect: {fileID: 1079392624}
   animacion: {fileID: 0}
+  emisor: {fileID: 0}
+  clip: {fileID: 8300000, guid: 7b76d9fac49898745997ddcde15a9416, type: 3}
 --- !u!1 &767853942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,6 +3949,8 @@ MonoBehaviour:
   mainInputField: {fileID: 2102590041}
   combinacion: 
   TextoLeido: {fileID: 662499190}
+  emisor: {fileID: 0}
+  clip: {fileID: 8300000, guid: 47cab4951ee1b834289f9a708c914c6a, type: 3}
   player: {fileID: 4688897808010464938}
   mano: {fileID: 759645183}
   abierto: 0

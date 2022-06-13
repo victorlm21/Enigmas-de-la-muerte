@@ -18,6 +18,9 @@ public class Seleccionado : MonoBehaviour
     // Start is called before the first frame update
     public string combinacion;
     public Text TextoLeido;
+    public AudioSource emisor;
+    //Clip de sonido
+    public AudioClip clip;
 
 
     public GameObject player;
@@ -102,9 +105,14 @@ public class Seleccionado : MonoBehaviour
         combinacion = TextoLeido.text;
         if (combinacion.Equals("0753"))
         {
+            //Hacemos que el emisor vaya a reproducir ese clip
+            emisor.clip = clip;
+            //hacemos que lo reproduzca
+            emisor.Play();
             animacion.enabled = true;
             minijuegoSalida();
             abierto = true;
+
         }
         else
         {

@@ -15,6 +15,9 @@ public class ObjetosSalaSergio : MonoBehaviour
     public bool objetosCogidos = false;
     private bool cuadro1er = false;
     private bool cuadro2do = false;
+    public AudioSource emisor;
+    //Clip de sonido
+    public AudioClip clip;
 
     private void Start()
     {
@@ -24,8 +27,13 @@ public class ObjetosSalaSergio : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && destruir)
         {
+            emisor.clip = clip;
+            //hacemos que lo reproduzca
+            emisor.Play();
             Destroy(objeto);
             TextDetect.SetActive(false);
+            //Hacemos que el emisor vaya a reproducir ese clip
+
             switch (objeto.name)
             {
                 case "gremclown":

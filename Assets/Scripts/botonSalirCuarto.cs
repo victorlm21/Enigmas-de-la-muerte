@@ -8,6 +8,9 @@ public class botonSalirCuarto : MonoBehaviour
     public GameObject boton;
     public GameObject TextDetect;
     public Animator animacion;
+    public AudioSource emisor;
+    //Clip de sonido
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,10 @@ public class botonSalirCuarto : MonoBehaviour
             {
                 TextDetect.SetActive(false);
                 animacion.enabled = true;
+                //Hacemos que el emisor vaya a reproducir ese clip
+                emisor.clip = clip;
+                //hacemos que lo reproduzca
+                emisor.Play();
             }
         }
     }

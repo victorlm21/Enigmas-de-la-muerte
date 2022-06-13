@@ -11,6 +11,9 @@ public class cogerChucky : MonoBehaviour
     public GameObject player;
     public GameObject cuadro3;
     public bool respuestaChuky = false;
+    public AudioSource Emisor;
+    //Clip de sonido
+    public AudioClip Clip;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +26,11 @@ public class cogerChucky : MonoBehaviour
                 TextDetect.SetActive(false);
                 cuadro3.AddComponent<Rigidbody>();
                 respuestaChuky = true;
+                //Hacemos que el emisor vaya a reproducir ese clip
+                Emisor.clip = Clip;
+                //hacemos que lo reproduzca
+                Emisor.Play();
+                Destroy(Emisor,5f);
             }
         }
     }
