@@ -6,6 +6,8 @@ public class AbrirCofre : MonoBehaviour
 {
 
     Animator anim;
+    public AudioSource emisor;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,8 @@ public class AbrirCofre : MonoBehaviour
         if (col.gameObject.tag == "Objeto")
         {
             anim.SetBool("AbrirCofre", true);
+            emisor.clip = clip;
+            emisor.Play();
         }
     }
 }
