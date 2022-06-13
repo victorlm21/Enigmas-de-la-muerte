@@ -7,7 +7,7 @@ public class InteraccionMenu : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
     public void QuitarJuego()
     {

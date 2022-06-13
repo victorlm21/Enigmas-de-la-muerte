@@ -11,6 +11,7 @@ public class botonSalirCuarto : MonoBehaviour
     public AudioSource emisor;
     //Clip de sonido
     public AudioClip clip;
+    private bool puerta = false;
     
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class botonSalirCuarto : MonoBehaviour
         if (mano.GetComponent<ObjetosSalaSergio>().objetosCogidos && mano.GetComponent<cogerChucky>().respuestaChuky)
         {
             boton.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && puerta)
             {
                 TextDetect.SetActive(false);
                 animacion.enabled = true;
@@ -41,6 +42,7 @@ public class botonSalirCuarto : MonoBehaviour
 
         if (other.CompareTag("botonPared"))
         {
+            puerta = true;
             boton = other.gameObject;
             TextDetect.SetActive(true);
         }
