@@ -9,7 +9,6 @@ public class Cronometro : MonoBehaviour
     //CRONOMETRO
     public Canvas canvasUI;
     private Text contador;
-    private Image reloj;
     public float tiempo;
     public float relojAamarillo;
     public float relojArojo;

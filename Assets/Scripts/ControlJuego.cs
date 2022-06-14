@@ -10,8 +10,9 @@ public class ControlJuego : MonoBehaviour
     [Header("Objetos")]
     private GameObject player;
     private GameObject mano;
-    public Menu controlmenu;
-    public Cronometro gameControles;
+    private Menu controlmenu;
+    private Cronometro gameControler;
+    
 
 
     [Header("Codigos Sergio")]
@@ -26,6 +27,7 @@ public class ControlJuego : MonoBehaviour
 
     [Header("Codigos Victor")]
     private Detectar codDetectar;
+    public Salir codSalir;
     private void Awake()
     {
         player = GameObject.Find("jugador");
@@ -33,7 +35,7 @@ public class ControlJuego : MonoBehaviour
 
 
         controlmenu = GameObject.Find("Control Menu").GetComponent<Menu>();
-        gameControles = GameObject.Find("Game Controller").GetComponent<Cronometro>();
+        gameControler = GameObject.Find("Game Controller").GetComponent<Cronometro>();
 
 
 
@@ -43,8 +45,8 @@ public class ControlJuego : MonoBehaviour
         codCogerChucky = GameObject.Find("Hand").GetComponent<cogerChucky>();
 
         codDetectar = GameObject.Find("jugador").GetComponent<Detectar>();
+        codSalir = GameObject.Find("Hand").GetComponent<Salir>();
 
-        
         CogerObjeto = GameObject.Find("Hand").GetComponent<CogerObjeto>();
         codInterfazFotos = GameObject.Find("Hand").GetComponent<InterfazFotos>();
     }
@@ -103,6 +105,7 @@ public class ControlJuego : MonoBehaviour
     public void codigosVictor(bool activar)
     {
         codDetectar.enabled = activar;
+        codSalir.enabled = activar;
     }
     public void codigosJavi(bool activar)
     {

@@ -102,7 +102,7 @@ public class Detectar : MonoBehaviour
             pista.text = "Puerta cerrada";
             puerta.emisor.clip = puerta.clipVisible;
             puerta.emisor.Play();
-            Destroy(pista, 3f);
+            Destroy(pista, 1.5f);
         }
     }
     void OnDrawGizmos()

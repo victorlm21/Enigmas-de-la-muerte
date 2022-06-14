@@ -19,6 +19,7 @@ public class Menu : MonoBehaviour
 
     public AudioSource[] allAudioSources;
 
+
     /*! \brief Tomamos el control de los componentes directamentes sin enlazarlos en la interfaz de unity
     */
     private void Awake()
@@ -27,6 +28,8 @@ public class Menu : MonoBehaviour
         valorSensibilidad = GameObject.Find("ValorSensibilidad").GetComponent<Text>();
         barraSensibilidad = GameObject.Find("Slider Sensibilidad").GetComponent<Slider>();
         barraVolumen = GameObject.Find("Slider Volumen").GetComponent<Slider>();
+
+        allAudioSources = FindObjectsOfType<AudioSource>();
 
         interactuar = GameObject.Find("INTERACTUAR");
         coger = GameObject.Find("COGER");
@@ -44,6 +47,8 @@ public class Menu : MonoBehaviour
 
         barraSensibilidad.value = codigo.sensibilidad;
         barraSensibilidad.value = 5;
+
+        barraVolumen.value = 60;
 
     }
 
@@ -63,6 +68,7 @@ public class Menu : MonoBehaviour
                 Pausa();
                 pausado = true;
             }
+            Cambiar_AudioSource();
         }
         valorSensibilidad.text = Mathf.Round(barraSensibilidad.value).ToString();
         valorVolumen.text = Mathf.FloorToInt(barraVolumen.value).ToString();
@@ -93,6 +99,7 @@ public class Menu : MonoBehaviour
         pausado = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
     }
     /*! \brief Salimos a la escena principal
     */
@@ -112,7 +119,7 @@ public class Menu : MonoBehaviour
     */
     public void ajusteVolumen()
     {
-        am.SetFloat("audio", barraVolumen.value - 20);
+        am.SetFloat("audio", barraVolumen.value - 80);
     }
     /*! \brief Modificamos los valores de las variables contenidas en el script Movimiento
     */
@@ -120,12 +127,15 @@ public class Menu : MonoBehaviour
     {
         codigo.sensibilidad = barraSensibilidad.value * 100;
     }
-
-    public void StopAllAudio()
+    public void Cambiar_AudioSource()
     {
-        foreach (AudioSource audioS in allAudioSources)
+        foreach (AudioSource a in allAudioSources)
         {
-            audioS.Stop();
+            if (a.isActiveAndEnabled == true)
+            {
+                if (a.isPlaying) a.Pause();
+                else a.UnPause();
+            }
         }
     }
 }

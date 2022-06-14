@@ -20,6 +20,7 @@ TagManager:
   - Habitacion Sergio
   - Habitacion Javi
   - Pasillo Victor
+  - puerta final
   layers:
   - Default
   - TransparentFX

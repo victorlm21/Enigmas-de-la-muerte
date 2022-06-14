@@ -2,62 +2,77 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Salir : MonoBehaviour
 {
-
-    //CODIGO EN EL JUGADOR
-    public float distancia = 1.5f;
-    public Texture2D puntero;
-    public GameObject minijuego;
-    public Animator animacion;
+    public GameObject minijuegoFinal;
     // Start is called before the first frame update
-    public string combinacion;
+    private string combinacion;
     public Text TextoLeido;
-    public AudioSource emisor;
-    //Clip de sonido
-    public AudioClip clip;
-
-    public bool abierto = false;
-
-    // Start is called before the first frame update
-    void Start()
+    public GameObject interactuar;
+    public Text textoInteractuar;
+    private bool encontacto = false;
+    private void Awake()
     {
-        
+        minijuegoFinal.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (encontacto)
+        {
+            interactuar.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("interactuar");
+                pausado();
+            }
+        }
+        else
+        {
+            interactuar.SetActive(false);
+        }
     }
 
-    public void guardarVariable()
+    public void ComprobarValor()
     {
         combinacion = TextoLeido.text;
         if (combinacion.Equals("4927"))
         {
-            //Hacemos que el emisor vaya a reproducir ese clip
-            emisor.clip = clip;
-            //hacemos que lo reproduzca
-            emisor.Play();
-            animacion.enabled = true;
-            minijuegoSalida();
-            abierto = true;
-
+            SceneManager.LoadScene("Menu");
         }
         else
         {
-            minijuegoSalida();
-
+            reanudar();
         }
     }
-
-    void minijuegoSalida()
+    private void OnTriggerStay(Collider other)
+    {
+        textoInteractuar.text = "Pulsa la tecla E";
+        if (other.CompareTag("puerta final"))
+        {
+            encontacto = true;
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        encontacto = false;
+    }
+    void pausado()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        minijuegoFinal.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    void reanudar()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        minijuego.SetActive(false);
-        Time.timeScale = 1;
+        minijuegoFinal.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
