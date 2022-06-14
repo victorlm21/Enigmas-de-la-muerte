@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
     private Text valorVolumen, valorSensibilidad;
 
     public AudioSource[] allAudioSources;
+    private bool pausarOno;
 
 
     /*! \brief Tomamos el control de los componentes directamentes sin enlazarlos en la interfaz de unity
@@ -68,7 +69,6 @@ public class Menu : MonoBehaviour
                 Pausa();
                 pausado = true;
             }
-            Cambiar_AudioSource();
         }
         valorSensibilidad.text = Mathf.Round(barraSensibilidad.value).ToString();
         valorVolumen.text = Mathf.FloorToInt(barraVolumen.value).ToString();
@@ -84,13 +84,13 @@ public class Menu : MonoBehaviour
         cronometro.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
-        //StopAllAudio();
+        Cambiar_AudioSource(true);
     }
     /*! \brief Invertimos los cambios realizados en el metodo Pausa()
     */
     public void Reanudar()
     {
+        Cambiar_AudioSource(false);
         Time.timeScale = 1f;
         ui.enabled = true;
         pausa.enabled = false;
@@ -127,14 +127,17 @@ public class Menu : MonoBehaviour
     {
         codigo.sensibilidad = barraSensibilidad.value * 100;
     }
-    public void Cambiar_AudioSource()
+    public void Cambiar_AudioSource(bool pausarOno)
     {
         foreach (AudioSource a in allAudioSources)
         {
-            if (a.isActiveAndEnabled == true)
+            if (pausarOno)
             {
-                if (a.isPlaying) a.Pause();
-                else a.UnPause();
+                a.Pause();
+            }
+            else
+            {
+                a.UnPause();
             }
         }
     }

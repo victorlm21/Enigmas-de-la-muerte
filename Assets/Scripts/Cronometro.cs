@@ -31,7 +31,7 @@ public class Cronometro : MonoBehaviour
         //Perder vida        
         if (tiempo <= 0)
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Perder");
         }
         if (contador.enabled == true)
         {

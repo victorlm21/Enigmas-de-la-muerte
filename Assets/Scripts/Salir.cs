@@ -41,7 +41,7 @@ public class Salir : MonoBehaviour
         combinacion = TextoLeido.text;
         if (combinacion.Equals("4927"))
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Ganar");
         }
         else
         {

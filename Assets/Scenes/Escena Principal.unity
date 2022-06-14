@@ -510,6 +510,10 @@ PrefabInstance:
       propertyPath: animacion
       value: 
       objectReference: {fileID: 1626034630}
+    - target: {fileID: 741427126, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 744507004, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -549,6 +553,10 @@ PrefabInstance:
     - target: {fileID: 767853944, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 833841804, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 981234913, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_AnchorMax.y
@@ -606,6 +614,10 @@ PrefabInstance:
       propertyPath: animacion
       value: 
       objectReference: {fileID: 120942712}
+    - target: {fileID: 1828123867, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1972278772, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_SizeDelta.x
       value: 213.172
@@ -619,6 +631,10 @@ PrefabInstance:
       value: 'Pulsa la tecla E
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099006228, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2117438895, guid: 9ca27a31f16dcc94e81ba4ca4f49d306, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1837,12 +1853,24 @@ PrefabInstance:
       value: Game Controller
       objectReference: {fileID: 0}
     - target: {fileID: 2985961652296176190, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
+      propertyPath: tiempo
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985961652296176190, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
       propertyPath: canvasUI
       value: 
       objectReference: {fileID: 1160365257}
     - target: {fileID: 2985961652296176190, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985961652296176190, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
+      propertyPath: relojArojo
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985961652296176190, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
+      propertyPath: relojAamarillo
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2985961652296176191, guid: 0f3ff0506cd90cc4bb5d4bca0c5c5fbb, type: 3}
       propertyPath: m_RootOrder
