@@ -17,6 +17,7 @@ public class Movimiento : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         camara.GetComponent<Camera>();
+        Time.timeScale = 1f;
     }
     // Update is called once per frame
     void Update()
