@@ -21,9 +21,16 @@ public class Reanudar : MonoBehaviour
     {
         contador.text = " " + tiempo;
     }
-    // Update is called once per frame
+
+
+    /*! \brief Contador para que al acabar el juego regrese al menu principal despues de la pantalla final
+    */
     void Update()
     {
+        /**
+         * @param contador es el texto en el que se mostraria el contador en caso de querer hacerlo
+         * @param tiempo va restando el tiempo para volver al menu principal
+         */
         tiempo -= Time.deltaTime;
         contador.enabled = true;
         contador.text = " " + tiempo.ToString("f0");

@@ -11,7 +11,8 @@ public class anim3 : MonoBehaviour
     private bool contacto = false;
     public Text texto;
 
-    // Start is called before the first frame update
+    /*! \brief Se ejecuta cuando el collider de la mano entra en contacto con el collider de las imagenes para permitir que estas giren, tanto para ver un lado como el otro
+    */
     void Start()
     {
         animacion = GetComponent<Animator>();
@@ -20,6 +21,13 @@ public class anim3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /**
+         * @param animacion variable que almacena la animacion de la imagen
+         * @param emisor variable que detecta quien es el emisor del sonido
+         * @param clip variable que almacena el sonido que emitira el emisor
+         * @param contacto booleano para saber si el collider de la mano esta en contacto con el collider de la imagen
+         * @param texto aparece en la esquina superior derecha indicando la tecla para la interaccion con el objeto
+         */
         if (contacto)
         {
             if (animacion.GetBool("girar3") == false)

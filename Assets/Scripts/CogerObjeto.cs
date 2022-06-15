@@ -17,8 +17,15 @@ public class CogerObjeto : MonoBehaviour
         coger.SetActive(false);
     }
 
+    /*! \brief Esta parte se ejecuta cuando el jugador tiene la llave en la mano, para que pueda soltarla pulsando la tecla R
+    */
     void Update()
     {
+        /**
+         * @param pickedObject es un booleano que sirve para saber si el jugador tiene la llave en la mano o no
+         * @param coger es una imagen que aparece en la esquina superior derecha cuando el jugador tiene el objeto en la mano o va a cogerlo
+         * @param texto aparece tambien en la esquina superior derecha indicando la tecla para la interaccion con el objeto
+         */
         if (pickedObject != null)
         {
             coger.SetActive(true);
@@ -37,6 +44,8 @@ public class CogerObjeto : MonoBehaviour
         
     }
 
+    /*! \brief Se ejecuta cuando el collider de la mano del jugador entra en contacto con el collider de la llave
+    */
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Objeto"))
