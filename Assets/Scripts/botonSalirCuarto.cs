@@ -21,8 +21,15 @@ public class botonSalirCuarto : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    /*! \brief Metodo que permite cargar la animación de la apertura de la puerta si los tres objetos se han cogido y selecciona la tecla E durante la colisión.
+    */
     void Update()
     {
+        /**
+         * @param boton Activa el GameObject para que aparezca en la escena.
+         * @param animacion Recoge el estado de la animación de la puerta.
+         */
         if (mano.GetComponent<ObjetosSalaSergio>().objetosCogidos && mano.GetComponent<cogerChucky>().respuestaChuky)
         {
             boton.SetActive(true);

@@ -27,6 +27,8 @@ public class Seleccionado : MonoBehaviour
     public GameObject mano;
     public bool abierto = false;
 
+    /*! \brief Metodo en el que se declara que el texto a enseñar al jugador este desactivado y se inicializa las variables que se van a usar.
+    */
     void Start()
     {
         mask = LayerMask.GetMask("Raycast Detect");
@@ -35,7 +37,9 @@ public class Seleccionado : MonoBehaviour
         animacion.enabled=false;
         TextoLeido.GetComponent<Text>();
     }
-
+    /*! \brief Metodo en el que se define las características del RayCast que se va a usar y mediante una condición filtra si el objeto al que se acerca tiene la etiqueta de cajaFuerte, si es así le aparecerá 
+     * al jugador el texto, y si estando en el rango del RayCast presiona la E, para el tiempo y le permita meter la combinación correspondiente. 
+     */
     // Update is called once per frame
     void Update()
     {
@@ -100,6 +104,9 @@ public class Seleccionado : MonoBehaviour
         minijuego.SetActive(false);
         Time.timeScale = 1;
     }
+    /*! \brief En este método se guarda el valor que introduce el jugador y se comprueba en una condición, si es el
+     * correcto activa la animación de la puerta abriéndose sino sales de la interfaz de introducir la combinación.
+     */
     public void guardarVariable()
     {
         combinacion = TextoLeido.text;

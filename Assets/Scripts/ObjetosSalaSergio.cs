@@ -23,8 +23,17 @@ public class ObjetosSalaSergio : MonoBehaviour
     {
         TextDetect.SetActive(false);
     }
+
+    /*! \brief Metodo que permite coger objetos e inicia la música.
+    */
     private void Update()
     {
+        /**
+        @param destruir Se usa para validar en el Update si se puede destruir el bojeto o no.
+        @param emisor Se usa para activar la música.     
+        @param cuadro1er Se usan para posteriormente saber si se estan cogiendo ambos cuadros.
+        @param cuadro2do Se usan para posteriormente saber si se estan cogiendo ambos cuadros.
+        */
         if (Input.GetKeyDown(KeyCode.E) && destruir)
         {
             emisor.clip = clip;
@@ -53,8 +62,15 @@ public class ObjetosSalaSergio : MonoBehaviour
             }
         }
     }
+
+    /*! \brief Metodo que recoge el nombre del GameObject y activa el texto indicativo para el jugador.
+    */
     private void OnTriggerEnter(Collider other)
     {
+        /**
+        @param destruir Se usa para validar en el Update si se puede destruir el bojeto o no.
+        @param objeto Recoge el nombre del objeto con el que colisiona 
+        */
         if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
         {
             Debug.Log("colision objeto");
@@ -63,8 +79,15 @@ public class ObjetosSalaSergio : MonoBehaviour
             destruir = true;
         }
     }
+
+    /*! \brief Metodo que desactiva el texto.
+    */
     private void OnTriggerExit(Collider other)
     {
+        /**
+        @param destruir Se usa para validar en el Update si se puede destruir el bojeto o no.
+        
+        */
         if (other.gameObject.CompareTag("muneco1") || other.gameObject.CompareTag("moneda"))
         {
             

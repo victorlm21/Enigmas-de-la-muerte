@@ -16,8 +16,16 @@ public class cogerChucky : MonoBehaviour
     public AudioClip Clip;
 
     // Update is called once per frame
+
+    /*! \brief Metodo que permite coger el muñeco, añadir Rigibody al cuadro y activar la música.
+    */
     void Update()
     {
+
+        /**
+         * @param respuestaChuky Permite guardar si el objeto ha sido recogido o no.
+         * @param cuadro3 GameObject que se encuentra en la sala.
+         */
         if (destruir && player.GetComponent<Seleccionado>().abierto)
         {
             if (Input.GetKeyDown(KeyCode.E))
