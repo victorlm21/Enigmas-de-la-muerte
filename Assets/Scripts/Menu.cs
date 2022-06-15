@@ -57,7 +57,7 @@ public class Menu : MonoBehaviour
     void Update()
     {
         //Entrar en pausa
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pausado)
             {
@@ -105,7 +105,7 @@ public class Menu : MonoBehaviour
     */
     public void Salir()
     {
-        SceneManager.LoadScene("Menu Principal");
+        SceneManager.LoadScene(0);
     }
     /*! \brief Invertimos los cambios realizados en el metodo Pausa()
     */
